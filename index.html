@@ -32,18 +32,40 @@
                 ☰
             </button>
 
-            <nav id="navMenu">
-                <a href="#home">Beranda</a>
-                <a href="#about">Tentang Kami</a>
-                <a href="#logo-philosophy">Filosofi Logo</a>
-                <a href="#menu">Menu & Order</a>
-                <a href="#pricelist">Daftar Harga</a>
-                <a href="#documentation">Dokumentasi</a>
-                <a href="#swot">Analisis SWOT</a>
-                <a href="#sop">SOP</a>
-                <a href="#reviews">Ulasan</a>
-                <a href="#contact">Kontak</a>
-            </nav>
+<nav id="navMenu">
+    <a href="#home">Beranda</a>
+
+    <details class="nav-dropdown">
+        <summary>Tentang Kami</summary>
+        <div class="dropdown-menu">
+            <a href="#about">Company Profile</a>
+            <a href="#history">Sejarah</a>
+            <a href="#vision-mission">Visi & Misi</a>
+            <a href="#logo-philosophy">Filosofi Logo</a>
+        </div>
+    </details>
+
+    <details class="nav-dropdown">
+        <summary>Menu & Order</summary>
+        <div class="dropdown-menu">
+            <a href="#menu">Daftar Menu</a>
+            <a href="#pricelist">Daftar Harga</a>
+        </div>
+    </details>
+
+    <details class="nav-dropdown">
+        <summary>Informasi</summary>
+        <div class="dropdown-menu">
+            <a href="#documentation">Dokumentasi</a>
+            <a href="#media-promosi">Media Promosi</a>
+            <a href="#swot">Analisis SWOT</a>
+            <a href="#sop">SOP</a>
+            <a href="#reviews">Ulasan</a>
+        </div>
+    </details>
+
+    <a href="#contact">Kontak</a>
+</nav>
         </div>
     </header>
 
@@ -116,7 +138,7 @@
             </div>
 
             <!-- VISI & MISI -->
-            <div class="vision-mission">
+           <div class="vision-mission" id="vision-mission"></div>
                 <div class="vm-card">
                     <div class="vm-icon">🎯</div>
                     <h3>Visi Usaha</h3>
@@ -130,7 +152,7 @@
             </div>
 
             <!-- SEJARAH -->
-            <div class="history">
+            <div class="history" id="history"></div>
                 <div class="section-title small-title">
                     <span>SEJARAH</span>
                     <h2>Perjalanan Usaha Kami</h2>
@@ -751,55 +773,37 @@
             </div>
         </div>
     </section>
+<!-- Ulasan -->
+    <section id="reviews" class="reviews-section">
+    <div class="section-header">
+        <h2>Ulasan Pelanggan</h2>
+        <p>
+            Pendapat dan pengalaman pelanggan Dapur Ibu Yeni
+            dapat kamu lihat langsung melalui Google Maps.
+        </p>
+    </div>
 
-    <!-- ================= REVIEWS ================= -->
-    <section id="reviews" class="section review-section">
-        <div class="container">
-            <div class="section-title">
-                <span>TESTIMONI</span>
-                <h2>Ulasan Pelanggan</h2>
-                <p>Tanggapan hangat dari para pelanggan yang telah menikmati hidangan Dapur Ibu Yeni.</p>
-            </div>
-
-            <div class="review-grid">
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Masakannya bener-bener berasa kayak masakan ibu sendiri di rumah. Ayam serundengnya renyah dan gurih!"</p>
-                    <div class="review-user">
-                        <div class="avatar">A</div>
-                        <div>
-                            <strong>Andi S.</strong>
-                            <span>Pelanggan Setia</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Porsi kenyang, harga ramah di kantong. Tongsengnya juara, kuahnya medok dan gurihnya pas!"</p>
-                    <div class="review-user">
-                        <div class="avatar">S</div>
-                        <div>
-                            <strong>Siti Rahma</strong>
-                            <span>Pelanggan Lokal</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Respon pemesanan lewat WA cepat banget. Makanan sampai masih hangat dan bungkusnya bersih rapi."</p>
-                    <div class="review-user">
-                        <div class="avatar">R</div>
-                        <div>
-                            <strong>Rizky P.</strong>
-                            <span>Pelanggan Online</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="google-review-card">
+        <div class="google-review-icon">
+            <i class="fab fa-google"></i>
         </div>
-    </section>
+
+        <h3>Ulasan Asli dari Google</h3>
+
+        <p>
+            Yuk, lihat pengalaman pelanggan lainnya
+            dan berikan ulasan setelah mencoba menu kami!
+        </p>
+
+        <a
+            href="https://maps.app.goo.gl/mB4aaGhzApQTqkU26?g_st=ac"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="google-review-button">
+            Lihat Ulasan di Google Maps
+        </a>
+    </div>
+</section>
 
     <!-- ================= CONTACT & MAPS ================= -->
     <section id="contact" class="contact-section">
@@ -810,18 +814,25 @@
                     <h3>📍 Lokasi Dapur Ibu Yeni</h3>
                     <p>Cipinang Pulo, Jatinegara - Jakarta Timur</p>
                 </div>
-                <div class="map-embed-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.331238827725!2d106.8770267!3d-6.220642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f36f6e8ab3c9%3A0x7d6c6e7a2a0d9e8!2sJl.%20Cipinang%20Pulo%20No.3%2C%20RT.1%2FRW.14%2C%20Cipinang%20Besar%20Utara%2C%20Kec.%20Jatinegara%2C%20Kota%20Jakarta%20Timur!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
-                        width="100%" 
-                        height="280" 
-                        style="border:0; border-radius: 12px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
+              <div class="map-embed-container">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.331238827725!2d106.8770267!3d-6.220642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f36f6e8ab3c9%3A0x7d6c6e7a2a0d9e8!2sJl.%20Cipinang%20Pulo%20No.3%2C%20RT.1%2FRW.14%2C%20Cipinang%20Besar%20Utara%2C%20Kec.%20Jatinegara%2C%20Kota%20Jakarta%20Timur!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+        width="100%"
+        height="280"
+        style="border:0; border-radius:12px;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+<div class="map-link">
+    <a href="https://maps.app.goo.gl/mB4aaGhzApQTqkU26?g_st=ac"
+       target="_blank"
+       rel="noopener noreferrer">
+        📍 Buka di Maps ↗
+    </a>
+</div>
 
           <!-- INFORMASI KONTAK -->
             <div class="contact-box">
