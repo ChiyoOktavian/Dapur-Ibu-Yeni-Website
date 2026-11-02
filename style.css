@@ -947,6 +947,7 @@ nav a:hover {
     max-width: 850px;
     margin: auto;
     text-align: center;
+    margin-top: 40px;
 }
 
 .contact-text h2 {
@@ -1940,4 +1941,163 @@ footer {
     .media-card {
         padding: 14px;
     }
+}
+
+/* ===== NAVBAR DROPDOWN: FINAL FIX ===== */
+#navMenu {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#navMenu > a,
+#navMenu .nav-dropdown > summary {
+    display: block;
+    padding: 10px 0;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#navMenu .nav-dropdown {
+    position: relative;
+    display: block;
+}
+
+#navMenu .nav-dropdown > summary {
+    list-style: none;
+}
+
+#navMenu .nav-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+#navMenu .nav-dropdown > summary::after {
+    content: "⌄";
+    margin-left: 6px;
+    color: var(--primary);
+}
+
+#navMenu .nav-dropdown > .dropdown-menu {
+    display: none !important;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 205px;
+    padding: 7px;
+    flex-direction: column;
+    gap: 2px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    z-index: 1200;
+}
+
+#navMenu .nav-dropdown[open] > .dropdown-menu {
+    display: flex !important;
+}
+
+#navMenu .dropdown-menu a {
+    display: block;
+    width: 100%;
+    padding: 9px 11px;
+    border-radius: 6px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+#navMenu .dropdown-menu a:hover {
+    background: var(--light);
+    color: var(--primary);
+}
+
+html {
+    scroll-padding-top: 95px;
+}
+
+@media (max-width: 768px) {
+    #navMenu {
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    #navMenu > a,
+    #navMenu .nav-dropdown > summary {
+        width: 100%;
+        padding: 10px 12px;
+        text-align: left;
+        border-bottom: 1px dashed var(--border);
+    }
+
+    #navMenu .nav-dropdown {
+        width: 100%;
+    }
+
+    #navMenu .nav-dropdown > .dropdown-menu {
+        position: static;
+        min-width: 0;
+        margin: 4px 10px 8px;
+        padding: 5px;
+        box-shadow: none;
+        background: var(--light);
+    }
+
+    #navMenu .dropdown-menu a {
+        white-space: normal;
+        text-align: left;
+    }
+
+    html {
+        scroll-padding-top: 80px;
+    }
+}
+
+.reviews-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.google-review-card {
+    max-width: 550px;
+    margin: 30px auto 0;
+    padding: 35px 25px;
+    background: #f5f0e6;
+    border: 1px solid #ded5c5;
+    border-radius: 18px;
+}
+
+.google-review-icon {
+    font-size: 38px;
+    color: #4285f4;
+    margin-bottom: 15px;
+}
+
+.google-review-card h3 {
+    color: #405744;
+    margin-bottom: 12px;
+}
+
+.google-review-card p {
+    color: #6b6258;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.google-review-button {
+    display: inline-block;
+    padding: 13px 24px;
+    background: #536b50;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.google-review-button:hover {
+    background: #3e533c;
+    transform: translateY(-2px);
 }
