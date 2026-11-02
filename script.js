@@ -198,3 +198,33 @@ function sendOrderToWA(event) {
     const encodedText = encodeURIComponent(waText);
     window.open(`https://wa.me/6281284374705?text=${encodedText}`, '_blank');
 }
+
+// Dropdown navbar: hanya satu yang terbuka
+const dropdowns = document.querySelectorAll(
+    "#navMenu .nav-dropdown"
+);
+
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener("toggle", () => {
+        if (dropdown.open) {
+            dropdowns.forEach(other => {
+                if (other !== dropdown) {
+                    other.open = false;
+                }
+            });
+        }
+    });
+});
+
+// Tutup dropdown setelah submenu dipilih
+document.querySelectorAll("#navMenu .dropdown-menu a")
+    .forEach(link => {
+        link.addEventListener("click", () => {
+            dropdowns.forEach(dropdown => {
+                dropdown.open = false;
+            });
+
+            document.getElementById("navMenu")
+                .classList.remove("active");
+        });
+    });
