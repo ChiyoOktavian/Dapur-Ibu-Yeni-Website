@@ -4,31 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dapur Ibu Yeni | Masakan Rumahan Lezat & Bergizi</title>
+    <meta name="description" content="Dapur Ibu Yeni adalah UMKM kuliner rumahan di Cipinang Pulo, Jakarta Timur. Menyajikan ayam goreng serundeng, nasi goreng, mie rebus, tongseng, dan mie goreng. Pesan online via WhatsApp.">
+    <meta name="theme-color" content="#9b3d20">
+    <meta name="author" content="Dapur Ibu Yeni">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Dapur Ibu Yeni | Masakan Rumahan Lezat & Bergizi">
+    <meta property="og:description" content="UMKM kuliner rumahan di Cipinang Pulo, Jakarta Timur. Menu rumahan lezat, higienis, dan terjangkau. Pesan online via WhatsApp.">
+    <meta property="og:image" content="assets/optimized/banner.jpg">
+    <meta property="og:image:alt" content="Banner Dapur Ibu Yeni">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dapur Ibu Yeni | Masakan Rumahan Lezat & Bergizi">
+    <meta name="twitter:description" content="UMKM kuliner rumahan di Cipinang Pulo, Jakarta Timur. Pesan menu rumahan lezat dan terjangkau via WhatsApp.">
+    <meta name="twitter:image" content="assets/optimized/banner.jpg">
+    <meta name="twitter:image:alt" content="Banner Dapur Ibu Yeni">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Gambar hero dimuat lebih awal agar LCP lebih baik -->
+    <link rel="preload" as="image" href="assets/optimized/hero-ayam.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Dapur Ibu Yeni",
+        "description": "UMKM kuliner rumahan yang menyajikan masakan rumahan lezat, higienis, dan terjangkau di Cipinang Pulo, Jakarta Timur.",
+        "servesCuisine": "Indonesian",
+        "priceRange": "Rp 15.000 - Rp 20.000",
+        "telephone": "+62-812-8437-4705",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Cipinang Pulo No.3, RT.1/RW.14",
+            "addressLocality": "Cipinang Besar Utara, Jatinegara",
+            "addressRegion": "Jakarta Timur",
+            "postalCode": "13410",
+            "addressCountry": "ID"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "08:00",
+            "closes": "21:00"
+        },
+        "paymentAccepted": "Tunai, QRIS",
+        "currenciesAccepted": "IDR",
+        "hasMap": "https://maps.app.goo.gl/mB4aaGhzApQTqkU26?g_st=ac",
+        "image": "assets/optimized/banner.jpg"
+    }
+    </script>
 </head>
 <body>
+
+    <a href="#home" class="skip-link">Lewati ke konten utama</a>
 
     <!-- ================= NAVBAR ================= -->
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand-area">
                 <a href="#home" class="logo">
-                    <img src="logo.jpeg" alt="Logo Dapur Ibu Yeni">
+                    <img src="assets/optimized/logo.jpg" alt="Logo Dapur Ibu Yeni" width="497" height="512" decoding="async">
                     <div>
                         <strong>Dapur Ibu Yeni</strong>
                         <span>Masakan Rumahan</span>
                     </div>
                 </a>
                 <div class="brand-divider"></div>
-                <img src="logo-empat-sekawan.png" alt="Logo Empat Sekawan" class="empat-sekawan-logo">
+                <img src="assets/optimized/logo-empat-sekawan.png" alt="Logo Empat Sekawan" class="empat-sekawan-logo" width="400" height="218" decoding="async">
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-controls="navMenu" aria-expanded="false">
                 ☰
             </button>
 
@@ -56,7 +107,7 @@
     <details class="nav-dropdown">
         <summary>Informasi</summary>
         <div class="dropdown-menu">
-            <a href="#documentation">Dokumentasi</a>
+            <a href="#documentation">Dokumentasi Kegiatan</a>
             <a href="#media-promosi">Media Promosi</a>
             <a href="#swot">Analisis SWOT</a>
             <a href="#sop">SOP</a>
@@ -74,12 +125,12 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <div class="hero-text">
-                <span class="badge">🍽️ UMKM Kuliner Rumahan</span>
+                <span class="badge"><span aria-hidden="true">🍽️</span> UMKM Kuliner Rumahan</span>
                 <h1>Dapur Ibu Yeni,<br><span>Rasa Yang Selalu Dinanti</span></h1>
                 <p>Menghadirkan masakan rumahan yang lezat, hangat, dan dibuat dengan bahan pilihan penuh kasih sayang untuk menemani setiap momen kebersamaan Anda.</p>
                 <div class="hero-buttons">
                     <a href="#menu" class="btn btn-primary">Lihat Menu</a>
-                    <a href="https://wa.me/6281284374705?text=Halo%20Dapur%20Ibu%20Yeni,%20saya%20ingin%20memesan%20makanan." target="_blank" class="btn btn-whatsapp">💬 Pesan Sekarang</a>
+                    <a href="https://wa.me/6281284374705?text=Halo%20Dapur%20Ibu%20Yeni,%20saya%20ingin%20memesan%20makanan." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><span aria-hidden="true">💬</span> Pesan Sekarang</a>
                 </div>
             </div>
         </div>
@@ -96,38 +147,38 @@
 
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="profile.jpeg" alt="Company Profile Dapur Ibu Yeni">
+                    <img src="assets/optimized/profile.jpg" alt="Company Profile Dapur Ibu Yeni" width="675" height="1200" loading="lazy" decoding="async">
                 </div>
 
                 <div class="about-content">
                     <h3>Profil Usaha</h3>
                     <p><strong>Dapur Ibu Yeni</strong> merupakan Usaha Mikro, Kecil, dan Menengah (UMKM) kuliner yang berfokus pada penyediaan hidangan masakan rumahan lezat, sehat, dan terjangkau.</p>
-                    <p>Kami memprioritaskan kebersihan, kesegaran bahan baku, serta cita rasa khas khas dapur rumah yang selalu dirindukan oleh setiap pelanggan.</p>
+                    <p>Kami memprioritaskan kebersihan, kesegaran bahan baku, serta cita rasa khas dapur rumah yang selalu dirindukan oleh setiap pelanggan.</p>
 
                     <div class="info-list">
                         <div>
-                            <span class="info-icon">🏪</span>
+                            <span class="info-icon" aria-hidden="true">🏪</span>
                             <div>
                                 <strong>Nama Usaha</strong>
                                 <p>Dapur Ibu Yeni</p>
                             </div>
                         </div>
                         <div>
-                            <span class="info-icon">🍳</span>
+                            <span class="info-icon" aria-hidden="true">🍳</span>
                             <div>
                                 <strong>Bidang Usaha</strong>
                                 <p>Kuliner / Makanan Rumahan</p>
                             </div>
                         </div>
                         <div>
-                            <span class="info-icon">📍</span>
+                            <span class="info-icon" aria-hidden="true">📍</span>
                             <div>
                                 <strong>Lokasi</strong>
                                 <p>Cipinang Pulo, Jakarta Timur</p>
                             </div>
                         </div>
                         <div>
-                            <span class="info-icon">💳</span>
+                            <span class="info-icon" aria-hidden="true">💳</span>
                             <div>
                                 <strong>Metode Pembayaran</strong>
                                 <p>Tunai & QRIS</p>
@@ -138,21 +189,21 @@
             </div>
 
             <!-- VISI & MISI -->
-           <div class="vision-mission" id="vision-mission"></div>
+            <div class="vision-mission" id="vision-mission">
                 <div class="vm-card">
-                    <div class="vm-icon">🎯</div>
+                    <div class="vm-icon" aria-hidden="true">🎯</div>
                     <h3>Visi Usaha</h3>
                     <p>Menjadi UMKM kuliner kepercayaan masyarakat yang menyajikan makanan rumahan berkualitas tinggi, lezat, higienis, dan terjangkau bagi semua lingkaran keluarga.</p>
                 </div>
                 <div class="vm-card">
-                    <div class="vm-icon">🚀</div>
+                    <div class="vm-icon" aria-hidden="true">🚀</div>
                     <h3>Misi Usaha</h3>
                     <p>Konsisten menjaga mutu rasa serta kebersihan, menggunakan bahan segar pilihan, memberikan pelayanan yang ramah dan cepat, serta terus berinovasi dalam ragam menu.</p>
                 </div>
             </div>
 
             <!-- SEJARAH -->
-            <div class="history" id="history"></div>
+            <div class="history" id="history">
                 <div class="section-title small-title">
                     <span>SEJARAH</span>
                     <h2>Perjalanan Usaha Kami</h2>
@@ -209,7 +260,7 @@
 
             <!-- LOGO -->
             <div class="philosophy-logo">
-                <img src="logo.jpeg" alt="Logo Dapur Ibu Yeni">
+                <img src="assets/optimized/logo.jpg" alt="Logo Dapur Ibu Yeni" width="497" height="512" loading="lazy" decoding="async">
             </div>
 
             <!-- PENJELASAN FILOSOFI -->
@@ -226,7 +277,7 @@
                 <div class="philosophy-list">
 
                     <div>
-                        <span>🏡</span>
+                        <span aria-hidden="true">🏡</span>
                         <div>
                             <strong>1. Tulisan Dapur Ibu Yeni</strong>
                             <p>
@@ -237,7 +288,7 @@
                     </div>
 
                     <div>
-                        <span>👨‍🍳</span>
+                        <span aria-hidden="true">👨‍🍳</span>
                         <div>
                             <strong>2. Topi Koki</strong>
                             <p>
@@ -248,7 +299,7 @@
                     </div>
 
                     <div>
-                        <span>🍲</span>
+                        <span aria-hidden="true">🍲</span>
                         <div>
                             <strong>3. Gambar Makanan</strong>
                             <p>
@@ -259,7 +310,7 @@
                     </div>
 
                     <div>
-                        <span>🌿</span>
+                        <span aria-hidden="true">🌿</span>
                         <div>
                             <strong>4. Warna Hijau Sage</strong>
                             <p>
@@ -269,7 +320,7 @@
                     </div>
 
                     <div>
-                        <span>🤍</span>
+                        <span aria-hidden="true">🤍</span>
                         <div>
                             <strong>5. Warna Krem</strong>
                             <p>
@@ -279,7 +330,7 @@
                     </div>
 
                     <div>
-                        <span>🍃</span>
+                        <span aria-hidden="true">🍃</span>
                         <div>
                             <strong>6. Hiasan Daun dan Bumbu</strong>
                             <p>
@@ -317,140 +368,47 @@
             </div>
 
             <!-- KATALOG MENU DENGAN PEMILIH JUMLAH (QTY) -->
-            <div class="menu-grid">
-                <!-- AYAM GORENG SERUNDENG -->
-                <article class="menu-card">
-                    <div class="menu-image">
-                        <img src="ayam-goreng-serundeng.png" alt="Ayam Goreng Serundeng">
-                    </div>
-                    <div class="menu-info">
-                        <h3>Ayam Goreng Serundeng</h3>
-                        <p>Ayam gurih renyah dengan baluran serundeng kelapa kaya rempah khas rumahan.</p>
-                        <div class="menu-bottom">
-                            <strong class="price">Rp 17.000</strong>
-                            <div class="qty-control">
-                                <button type="button" class="btn-qty" onclick="updateQty('ayam', -1)">-</button>
-                                <span id="qty-ayam" class="qty-count">0</span>
-                                <button type="button" class="btn-qty" onclick="updateQty('ayam', 1)">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+            <!-- Kartu menu dirender dari data produk di script.js agar harga dan nama konsisten -->
+            <div class="menu-grid" id="menuGrid"></div>
 
-                <!-- NASI GORENG -->
-                <article class="menu-card">
-                    <div class="menu-image">
-                        <img src="nasi-goreng.png" alt="Nasi Goreng">
-                    </div>
-                    <div class="menu-info">
-                        <h3>Nasi Goreng Spesial</h3>
-                        <p>Nasi goreng harum berani bumbu dengan rasa gurih pas dan pelengkap mantap.</p>
-                        <div class="menu-bottom">
-                            <strong class="price">Rp 15.000</strong>
-                            <div class="qty-control">
-                                <button type="button" class="btn-qty" onclick="updateQty('nasgor', -1)">-</button>
-                                <span id="qty-nasgor" class="qty-count">0</span>
-                                <button type="button" class="btn-qty" onclick="updateQty('nasgor', 1)">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+            <noscript>
+                <p class="noscript-note">
+                    Aktifkan JavaScript untuk melihat katalog interaktif dan memesan online.
+                    Menu yang tersedia: Ayam Goreng Serundeng (Rp 17.000), Nasi Goreng Spesial (Rp 15.000),
+                    Mie Rebus Kuah Warm (Rp 15.000), Tongseng Gurih (Rp 20.000), dan Mie Goreng (Rp 15.000).
+                    Pemesanan dapat dilakukan melalui WhatsApp di <a href="https://wa.me/6281284374705">+62 812-8437-4705</a>.
+                </p>
+            </noscript>
 
-                <!-- MIE REBUS -->
-                <article class="menu-card">
-                    <div class="menu-image">
-                        <img src="mie-rebus.jpeg" alt="Mie Rebus">
-                    </div>
-                    <div class="menu-info">
-                        <h3>Mie Rebus Kuah Warm</h3>
-                        <p>Mie kuah hangat dengan kaldu gurih segar, pas disantap kapan saja.</p>
-                        <div class="menu-bottom">
-                            <strong class="price">Rp 15.000</strong>
-                            <div class="qty-control">
-                                <button type="button" class="btn-qty" onclick="updateQty('mierebus', -1)">-</button>
-                                <span id="qty-mierebus" class="qty-count">0</span>
-                                <button type="button" class="btn-qty" onclick="updateQty('mierebus', 1)">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- TONGSENG -->
-                <article class="menu-card">
-                    <div class="menu-image">
-                        <img src="tongseng.png" alt="Tongseng">
-                    </div>
-                    <div class="menu-info">
-                        <h3>Tongseng Gurih</h3>
-                        <p>Tongseng dengan kuah santan bumbu kaya rempah yang meresap sempurna.</p>
-                        <div class="menu-bottom">
-                            <strong class="price">Rp 20.000</strong>
-                            <div class="qty-control">
-                                <button type="button" class="btn-qty" onclick="updateQty('tongseng', -1)">-</button>
-                                <span id="qty-tongseng" class="qty-count">0</span>
-                                <button type="button" class="btn-qty" onclick="updateQty('tongseng', 1)">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-            <!-- MIE GORENG -->
-<article class="menu-card">
-    <div class="menu-image">
-        <img src="mie-goreng.png" alt="Mie Goreng">
-    </div>
-
-    <div class="menu-info">
-        <h3>Mie Goreng</h3>
-        <p>Mie goreng lezat dengan bumbu pilihan yang gurih dan nikmat.</p>
-
-        <div class="menu-bottom">
-            <strong class="price">Rp 15.000</strong>
-
-            <div class="qty-control">
-                <button type="button" class="btn-qty"
-                    onclick="updateQty('mie-goreng', -1)">-</button>
-
-                <span id="qty-mie-goreng" class="qty-count">0</span>
-
-                <button type="button" class="btn-qty"
-                    onclick="updateQty('mie-goreng', 1)">+</button>
-            </div>
-        </div>
-    </div>
-</article>
-</div>
-            
-            
             <!-- BAR STICKY RINGKASAN PESANAN SEMENTARA -->
-            <div class="order-floating-bar">
+            <div class="order-floating-bar" role="status" aria-live="polite">
                 <div class="floating-info">
                     <span id="floatingCount">0 Item Dipilih</span>
                     <strong id="floatingTotal">Rp 0</strong>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="openOrderModal()">
-                    Lanjut ke Pemesanan ➔
+                <button type="button" class="btn btn-primary" id="openOrderBtn">
+                    Lanjut ke Pemesanan <span aria-hidden="true">➔</span>
                 </button>
             </div>
         </div>
     </section>
 
     <!-- ================= MODAL KONFIRMASI & DATA PEMESANAN (TERPISAH) ================= -->
-    <div id="orderModal" class="modal-overlay">
-        <div class="modal-card">
-            <button type="button" class="modal-close" onclick="closeOrderModal()">✕</button>
-            
+    <div id="orderModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle" aria-describedby="orderModalDesc" aria-hidden="true">
+        <div class="modal-card" tabindex="-1">
+            <button type="button" class="modal-close" id="closeOrderBtn" aria-label="Tutup formulir pemesanan">✕</button>
+
             <div class="modal-header">
-                <h3>Konfirmasi & Data Pemesanan</h3>
-                <p>Lengkapi data di bawah untuk mengirim pesanan langsung ke WhatsApp admin.</p>
+                <h3 id="orderModalTitle">Konfirmasi & Data Pemesanan</h3>
+                <p id="orderModalDesc">Lengkapi data di bawah untuk mengirim pesanan langsung ke WhatsApp admin.</p>
             </div>
 
-            <form id="orderForm" onsubmit="sendOrderToWA(event)">
+            <form id="orderForm">
                 <div class="modal-body">
                     <!-- SISI 1: RINGKASAN PESANAN -->
                     <div class="summary-box">
-                        <h4>📋 Ringkasan Pesanan Anda:</h4>
-                        <ul id="modalSummaryList" class="summary-list">
+                        <h4><span aria-hidden="true">📋</span> Ringkasan Pesanan Anda:</h4>
+                        <ul id="modalSummaryList" class="summary-list" aria-live="polite">
                             <li class="empty-msg">Belum ada menu yang dipilih</li>
                         </ul>
                         <div class="total-row">
@@ -463,17 +421,17 @@
                     <div class="form-section">
                         <div class="form-group">
                             <label for="custName">Nama Pemesan *</label>
-                            <input type="text" id="custName" placeholder="Contoh: Budi" required>
+                            <input type="text" id="custName" name="custName" placeholder="Contoh: Budi" autocomplete="name" maxlength="80" required>
                         </div>
 
                         <div class="form-group">
                             <label for="custAddress">Alamat Pengiriman / Catatan *</label>
-                            <textarea id="custAddress" rows="2" placeholder="Contoh: Jl. Cipinang No. 12 (Pesan pedas)" required></textarea>
+                            <textarea id="custAddress" name="custAddress" rows="2" placeholder="Contoh: Jl. Cipinang No. 12 (Pesan pedas)" autocomplete="street-address" maxlength="300" required></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="custPayment">Metode Pembayaran *</label>
-                            <select id="custPayment">
+                            <select id="custPayment" name="custPayment">
                                 <option value="Tunai / COD">Tunai / COD</option>
                                 <option value="QRIS">QRIS / Cashless</option>
                             </select>
@@ -481,10 +439,12 @@
                     </div>
                 </div>
 
+                <p id="orderFormError" class="form-error" role="alert" hidden></p>
+
                 <div class="modal-footer">
-                    <button type="button" class="btn-cancel" onclick="closeOrderModal()">Batal</button>
-                    <button type="submit" class="btn btn-whatsapp">
-                        💬 Pesan via WhatsApp
+                    <button type="button" class="btn-cancel" id="cancelOrderBtn">Batal</button>
+                    <button type="submit" class="btn btn-whatsapp" id="orderSubmitBtn">
+                        <span aria-hidden="true">💬</span> Pesan via WhatsApp
                     </button>
                 </div>
             </form>
@@ -500,77 +460,69 @@
                 <p>Harga terjangkau dengan porsi hemat dan rasa yang memuaskan.</p>
             </div>
 
-            <div class="price-table">
+            <div class="price-table" id="priceTable">
                 <div class="price-row price-header">
                     <span>Nama Menu Makanan</span>
                     <span>Harga Satuan</span>
-                </div>
-                <div class="price-row">
-                    <span>Ayam Goreng Serundeng</span>
-                    <strong>Rp 17.000</strong>
-                </div>
-                <div class="price-row">
-                    <span>Nasi Goreng Spesial</span>
-                    <strong>Rp 15.000</strong>
-                </div>
-                <div class="price-row">
-                    <span>Mie Rebus Warm</span>
-                    <strong>Rp 15.000</strong>
-                </div>
-                <div class="price-row">
-                    <span>Tongseng Gurih</span>
-                    <strong>Rp 20.000</strong>
-                </div>
-                <div class="price-row">
-                    <span>Menu Spesial Pilihan</span>
-                    <strong>Rp 15.000</strong>
                 </div>
             </div>
         </div>
     </section>
 
    
-    <!-- ================= DOKUMENTASI KEGIATAN ================= -->
-    <section id="documentation" class="section documentation-section">
-        <div class="container">
-            <div class="section-title">
-                <span>DOKUMENTASI</span>
-                <h2>Aktivitas Usaha Dapur Ibu Yeni</h2>
-                <p>Gambaran proses operasional, kebersihan dapur, dan kesiapan pelayanan kami.</p>
-            </div>
+    <!-- 
+<!-- ================= DOKUMENTASI KEGIATAN ================= -->
+<section id="documentation" class="section documentation-section">
+    <div class="container">
+        <div class="section-title">
+            <span>DOKUMENTASI KEGIATAN</span>
+            <h2>Dokumentasi Kegiatan Membantu UMKM</h2>
+            <p>
+                Berikut adalah dokumentasi kegiatan kami dalam mendukung
+                dan membantu pengembangan UMKM Dapur Ibu Yeni.
+            </p>
+        </div>
 
-            <div class="documentation-grid">
-                <div class="documentation-card">
-                    <div class="doc-placeholder">🥬 Persiapan Bahan</div>
-                    <div class="documentation-caption">
-                        <h3>Persiapan Bahan Segar</h3>
-                        <p>Pemilihan dan pencucian bahan-bahan mentah berkualitas tinggi.</p>
-                    </div>
-                </div>
-                <div class="documentation-card">
-                    <div class="doc-placeholder">🍳 Proses Memasak</div>
-                    <div class="documentation-caption">
-                        <h3>Proses Pengolahan Makanan</h3>
-                        <p>Pengolahan masakan dengan standar higienis dan resep khas.</p>
-                    </div>
-                </div>
-                <div class="documentation-card">
-                    <div class="doc-placeholder">🍱 Pengemasan Pesanan</div>
-                    <div class="documentation-caption">
-                        <h3>Pengemasan Rapi</h3>
-                        <p>Pengemasan dalam wadah aman dan bersih siap kirim.</p>
-                    </div>
-                </div>
-                <div class="documentation-card">
-                    <div class="doc-placeholder">🤝 Pelayanan Pelanggan</div>
-                    <div class="documentation-caption">
-                        <h3>Pelayanan Pesanan</h3>
-                        <p>Serah terima pesanan kepada pelanggan secara ramah.</p>
-                    </div>
+        <div class="documentation-grid">
+
+            <!-- Foto 1 -->
+            <div class="documentation-card">
+                <img
+                    src="dokumentasi-2.jpeg"
+                    alt="Dokumentasi bersama pemilik UMKM Dapur Ibu Yeni"
+                    loading="lazy"
+                >
+                <div class="documentation-caption">
+                    <h3>Kegiatan Bersama Pemilik UMKM</h3>
+                    <p>
+                        Dokumentasi bersama pemilik UMKM Dapur Ibu Yeni
+                        sebagai bentuk kerja sama dan dukungan terhadap
+                        usaha lokal.
+                    </p>
                 </div>
             </div>
 
-           
+            <!-- Foto 2 -->
+            <div class="documentation-card">
+                <img
+                    src="dokumentasi-1.jpeg"
+                    alt="Dokumentasi kunjungan ke lokasi UMKM Dapur Ibu Yeni"
+                    loading="lazy"
+                >
+                <div class="documentation-caption">
+                    <h3>Kunjungan ke Lokasi UMKM</h3>
+                    <p>
+                        Dokumentasi kunjungan ke tempat usaha
+                        Dapur Ibu Yeni.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ================= AKHIR DOKUMENTASI KEGIATAN ================= -->
+
 <!-- ================= MEDIA PROMOSI ================= -->
 <div class="media-section" id="media-promosi">
     <div class="section-title">
@@ -585,34 +537,45 @@
     <div class="media-grid">
         <!-- Poster -->
         <div class="media-card">
-            <a href="images/poster.png" target="_blank">
+            <a href="assets/optimized/poster.jpg" target="_blank" rel="noopener noreferrer">
                 <img
-                    src="poster.png"
+                    src="assets/optimized/poster.jpg"
                     alt="Poster Promosi Dapur Ibu Yeni"
                     class="promotion-image poster-image"
+                    width="707"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
                 >
             </a>
-            <h4>Poster Promosi</h4>
+            <h3>Poster Promosi</h3>
             <p>Informasi menu dan kontak Dapur Ibu Yeni.</p>
         </div>
 
         <!-- Banner -->
         <div class="media-card">
-            <a href="banner.png">
+            <a href="assets/optimized/banner.jpg" target="_blank" rel="noopener noreferrer">
                 <img
-                    src="banner.png"
+                    src="assets/optimized/banner.jpg"
                     alt="Banner Dapur Ibu Yeni"
                     class="promotion-image banner-image"
+                    width="1200"
+                    height="595"
+                    loading="lazy"
+                    decoding="async"
                 >
             </a>
-            <h4>Banner Usaha</h4>
+            <h3>Banner Usaha</h3>
             <p>Identitas dan media promosi Dapur Ibu Yeni.</p>
         </div>
     </div>
 </div>
 
+        </div><!-- /.container (Dokumentasi) -->
+    </section><!-- /#documentation -->
+
     <!-- ================= QRIS ================= -->
-    <section class="section qris-section">
+    <section class="section qris-section" id="qris">
         <div class="container qris-container">
             <div class="qris-text">
                 <span class="badge">PEMBAYARAN CASHLESS</span>
@@ -624,18 +587,22 @@
                     <span>✓ Terkonfirmasi Otomatis</span>
                 </div>
             </div>
-           
-<div class="qris-card">
-    <div class="qris-box">
-        <img
-            src="qris.jpeg"
-            alt="Kode QRIS resmi Dapur Ibu Yeni"
-            class="qris-image">
-    </div>
-    <h3>QRIS Dapur Ibu Yeni</h3>
-    <p>Scan kode QR untuk melakukan pembayaran.</p>
-</div>
 
+            <div class="qris-card">
+                <div class="qris-box">
+                    <img
+                        src="qris.jpeg"
+                        alt="Kode QRIS resmi Dapur Ibu Yeni"
+                        class="qris-image"
+                        width="637"
+                        height="824"
+                        loading="lazy"
+                        decoding="async">
+                </div>
+                <h3>QRIS Dapur Ibu Yeni</h3>
+                <p>Scan kode QR untuk melakukan pembayaran.</p>
+            </div>
+        </div><!-- /.qris-container -->
     </section>
 
     
@@ -654,7 +621,7 @@
         <div class="swot-grid">
             <!-- Strength -->
             <div class="swot-card strength">
-                <div class="swot-icon">💪</div>
+                <div class="swot-icon" aria-hidden="true">💪</div>
                 <h3>Kekuatan (Strength)</h3>
                 <p>
                     Dapur Ibu Yeni memiliki produk makanan yang dapat
@@ -667,7 +634,7 @@
 
             <!-- Weakness -->
             <div class="swot-card weakness">
-                <div class="swot-icon">🔧</div>
+                <div class="swot-icon" aria-hidden="true">🔧</div>
                 <h3>Kelemahan (Weakness)</h3>
                 <p>
                     Website membutuhkan waktu dan tenaga untuk
@@ -679,7 +646,7 @@
 
             <!-- Opportunities -->
             <div class="swot-card opportunities">
-                <div class="swot-icon">📈</div>
+                <div class="swot-icon" aria-hidden="true">📈</div>
                 <h3>Peluang (Opportunities)</h3>
                 <p>
                     Teknologi digital membuka peluang memperluas pemasaran.
@@ -691,7 +658,7 @@
 
             <!-- Threats -->
             <div class="swot-card threats">
-                <div class="swot-icon">⚠️</div>
+                <div class="swot-icon" aria-hidden="true">⚠️</div>
                 <h3>Ancaman (Threats)</h3>
                 <p>
                     Persaingan dengan usaha makanan lain, perubahan
@@ -704,7 +671,7 @@
 
         <!-- Strategi Pemasaran -->
         <div class="marketing-strategy">
-            <div class="marketing-icon">📣</div>
+            <div class="marketing-icon" aria-hidden="true">📣</div>
             <div class="marketing-content">
                 <span class="badge">PENGEMBANGAN USAHA</span>
                 <h2>Strategi Pemasaran</h2>
@@ -775,7 +742,7 @@
     </section>
 <!-- Ulasan -->
     <section id="reviews" class="reviews-section">
-    <div class="section-header">
+    <div class="section-title">
         <h2>Ulasan Pelanggan</h2>
         <p>
             Pendapat dan pengalaman pelanggan Dapur Ibu Yeni
@@ -784,8 +751,13 @@
     </div>
 
     <div class="google-review-card">
-        <div class="google-review-icon">
-            <i class="fab fa-google"></i>
+        <div class="google-review-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="38" height="38" focusable="false">
+                <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+                <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+                <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+                <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+            </svg>
         </div>
 
         <h3>Ulasan Asli dari Google</h3>
@@ -811,15 +783,15 @@
             <!-- PETA GOOGLE MAPS INTERAKTIF -->
             <div class="map-visual-card">
                 <div class="map-visual-header">
-                    <h3>📍 Lokasi Dapur Ibu Yeni</h3>
+                    <h3><span aria-hidden="true">📍</span> Lokasi Dapur Ibu Yeni</h3>
                     <p>Cipinang Pulo, Jatinegara - Jakarta Timur</p>
                 </div>
               <div class="map-embed-container">
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.331238827725!2d106.8770267!3d-6.220642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f36f6e8ab3c9%3A0x7d6c6e7a2a0d9e8!2sJl.%20Cipinang%20Pulo%20No.3%2C%20RT.1%2FRW.14%2C%20Cipinang%20Besar%20Utara%2C%20Kec.%20Jatinegara%2C%20Kota%20Jakarta%20Timur!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
-        width="100%"
         height="280"
-        style="border:0; border-radius:12px;"
+        style="border:0; border-radius:12px; width:100%;"
+        title="Peta lokasi Dapur Ibu Yeni di Cipinang Pulo, Jakarta Timur"
         allowfullscreen
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
@@ -830,9 +802,10 @@
     <a href="https://maps.app.goo.gl/mB4aaGhzApQTqkU26?g_st=ac"
        target="_blank"
        rel="noopener noreferrer">
-        📍 Buka di Maps ↗
+        <span aria-hidden="true">📍</span> Buka di Maps <span aria-hidden="true">↗</span>
     </a>
 </div>
+            </div><!-- /.map-visual-card -->
 
           <!-- INFORMASI KONTAK -->
             <div class="contact-box">
@@ -843,15 +816,15 @@
 
                     <div class="contact-info">
                         <div class="contact-item">
-                            <span class="icon">📱</span>
+                            <span class="icon" aria-hidden="true">📱</span>
                             <div>
                                 <strong>WhatsApp Kami</strong>
-                                <p><a href="https://wa.me/6281284374705" target="_blank">+62 812-8437-4705</a></p>
+                                <p><a href="https://wa.me/6281284374705" target="_blank" rel="noopener noreferrer">+62 812-8437-4705</a></p>
                             </div>
                         </div>
 
                         <div class="contact-item">
-                            <span class="icon">📍</span>
+                            <span class="icon" aria-hidden="true">📍</span>
                             <div>
                                 <strong>Alamat Utama</strong>
                                 <p>Jl. Cipinang Pulo No.3, RT.1/RW.14, Cipinang Besar Utara, Jatinegara, Jakarta Timur 13410</p>
@@ -859,7 +832,7 @@
                         </div>
 
                         <div class="contact-item">
-                            <span class="icon">🕐</span>
+                            <span class="icon" aria-hidden="true">🕐</span>
                             <div>
                                 <strong>Jam Operasional</strong>
                                 <p>08.00 - 21.00 WIB (Setiap Hari)</p>
@@ -867,17 +840,19 @@
                         </div>
                     </div>
 
-                    <a href="https://wa.me/6281284374705?text=Halo%20Dapur%20Ibu%20Yeni,%20saya%20ingin%20memesan%20makanan." target="_blank" class="btn btn-primary">
-                        💬 Hubungi via WhatsApp
+                    <a href="https://wa.me/6281284374705?text=Halo%20Dapur%20Ibu%20Yeni,%20saya%20ingin%20memesan%20makanan." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span aria-hidden="true">💬</span> Hubungi via WhatsApp
                     </a>
                 </div>
             </div>
+        </div><!-- /.container (Kontak) -->
+    </section><!-- /#contact -->
 
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="container footer-container">
             <div class="footer-brand">
-                <img src="logo.jpeg" alt="Logo Dapur Ibu Yeni">
+                <img src="assets/optimized/logo.jpg" alt="Logo Dapur Ibu Yeni" width="497" height="512" loading="lazy" decoding="async">
                 <div>
                     <h3>Dapur Ibu Yeni</h3>
                     <p>Menyajikan masakan rumahan otentik dengan cita rasa hangat yang selalu membuat rindu suasana rumah.</p>
@@ -891,7 +866,7 @@
                 <a href="#logo-philosophy">Filosofi Logo</a>
                 <a href="#menu">Menu Makanan</a>
                 <a href="#pricelist">Daftar Harga</a>
-                <a href="#delivery">Delivery Order</a>
+                <a href="#menu">Delivery Order</a>
             </div>
 
             <div class="footer-links">
