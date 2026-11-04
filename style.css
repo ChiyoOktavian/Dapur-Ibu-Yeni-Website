@@ -245,7 +245,7 @@ nav a:hover {
     position: relative;
     display: flex;
     align-items: center;
-    background: linear-gradient(90deg, rgba(32, 19, 12, 0.92) 0%, rgba(32, 19, 12, 0.7) 60%, rgba(32, 19, 12, 0.4) 100%), url("ayam-goreng-serundeng.png");
+    background: linear-gradient(90deg, rgba(32, 19, 12, 0.92) 0%, rgba(32, 19, 12, 0.7) 60%, rgba(32, 19, 12, 0.4) 100%), url("assets/optimized/hero-ayam.jpg");
     background-size: cover;
     background-position: center;
     padding-top: 100px;
@@ -540,36 +540,44 @@ nav a:hover {
     color: var(--white);
 }
 
-/* ================= DOKUMENTASI & MEDIA ================= */
+
+/* ================= DOKUMENTASI KEGIATAN ================= */
 .documentation-section {
     background: var(--light);
 }
 
 .documentation-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
 }
 
 .documentation-card {
     position: relative;
-    height: 260px;
+    height: 350px;
     border-radius: var(--radius-md);
     overflow: hidden;
     background: var(--dark);
     box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.doc-placeholder {
+.documentation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.documentation-card img {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #4a382e, #211914);
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 16px;
-    font-weight: 600;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.documentation-card:hover img {
+    transform: scale(1.05);
 }
 
 .documentation-caption {
@@ -577,51 +585,35 @@ nav a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 25px 20px 20px;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.9)
+    );
     color: var(--white);
 }
 
 .documentation-caption h3 {
-    font-size: 16px;
-    margin-bottom: 4px;
+    font-size: 17px;
+    margin-bottom: 6px;
 }
 
 .documentation-caption p {
-    font-size: 12px;
-    opacity: 0.8;
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
-.media-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
+/* Tampilan Tablet dan HP */
+@media (max-width: 768px) {
+    .documentation-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-.media-card {
-    background: var(--white);
-    padding: 20px;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    text-align: center;
-}
-
-.media-placeholder {
-    height: 220px;
-    background: #e0d5c9;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray);
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.media-card h4 {
-    margin-top: 15px;
-    font-size: 15px;
+    .documentation-card {
+        height: 300px;
+    }
 }
 
 /* ================= QRIS ================= */
@@ -1921,7 +1913,7 @@ footer {
     margin: 0 auto;
 }
 
-.media-card h4 {
+.media-card h3 {
     margin: 16px 0 8px;
     color: #354b3b;
 }
@@ -1944,8 +1936,10 @@ footer {
 }
 
 /* ===== NAVBAR DROPDOWN: FINAL FIX ===== */
+/* Catatan: `display` sengaja tidak diatur di sini.
+   Desktop memakai aturan `nav`, sedangkan mobile memakai `nav { display: none }`
+   dan `nav.active { display: flex }` agar tombol hamburger berfungsi. */
 #navMenu {
-    display: flex;
     align-items: center;
     gap: 18px;
 }
@@ -2100,4 +2094,205 @@ html {
 .google-review-button:hover {
     background: #3e533c;
     transform: translateY(-2px);
+}
+
+/* =====================================================
+   PERBAIKAN P0/P1 — AKSESIBILITAS, NAVIGASI & PESANAN
+===================================================== */
+
+/* Skip link untuk pengguna keyboard */
+.skip-link {
+    position: absolute;
+    top: -80px;
+    left: 16px;
+    z-index: 3000;
+    padding: 10px 18px;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    background: var(--primary);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Indikator fokus keyboard yang jelas */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 2px;
+}
+
+.modal-card:focus {
+    outline: none;
+}
+
+/* Mencegah halaman ikut bergulir saat modal terbuka */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Bar ringkasan pesanan (sebelumnya belum memiliki style dasar) */
+.order-floating-bar {
+    position: sticky;
+    bottom: 16px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 14px 18px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-hover);
+}
+
+.floating-info {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#floatingCount {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+#floatingTotal {
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.order-floating-bar .btn {
+    white-space: nowrap;
+}
+
+/* Validasi form pemesanan */
+.form-error {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border: 1px solid #f1b5ae;
+    border-radius: var(--radius-sm);
+    background: #fef3f2;
+    color: #9d241a;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.form-error a {
+    color: #9d241a;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Catatan jika JavaScript dinonaktifkan */
+.noscript-note {
+    margin-top: 20px;
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--light);
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* Heading Ulasan mengikuti tipografi section lain */
+.reviews-section .section-title {
+    margin-bottom: 0;
+}
+
+.google-review-icon svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hormati preferensi pengguna yang mengurangi animasi */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ================= MENU SLIDER SEMUA PERANGKAT ================= */
+
+.menu-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 12px 5px 22px;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+/* Ukuran kartu desktop */
+.menu-grid .menu-card {
+    flex: 0 0 280px;
+    width: 280px;
+    min-width: 0;
+
+    scroll-snap-align: start;
+}
+
+/* Scrollbar */
+.menu-grid::-webkit-scrollbar {
+    height: 7px;
+}
+
+.menu-grid::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.menu-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Tampilan tablet */
+@media (max-width: 900px) {
+    .menu-grid .menu-card {
+        flex-basis: 260px;
+        width: 260px;
+    }
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .menu-grid {
+        gap: 14px;
+    }
+
+    .menu-grid .menu-card {
+        flex-basis: 78%;
+        width: 78%;
+        max-width: 290px;
+    }
 }
