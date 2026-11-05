@@ -26,31 +26,31 @@
         },
         {
             key: "nasgor",
-            name: "Nasi Goreng Spesial",
+            name: "Nasi Goreng",
             price: 15000,
             description: "Nasi goreng harum berani bumbu dengan rasa gurih pas dan pelengkap mantap.",
             image: "assets/optimized/menu-nasi-goreng.jpg",
-            alt: "Nasi Goreng Spesial",
+            alt: "Nasi Goreng",
             width: 600,
             height: 800
         },
         {
             key: "mierebus",
-            name: "Mie Rebus Kuah Warm",
+            name: "Mie Rebus Kuah",
             price: 15000,
             description: "Mie kuah hangat dengan kaldu gurih segar, pas disantap kapan saja.",
             image: "assets/optimized/menu-mie-rebus.jpg",
-            alt: "Mie Rebus Kuah Warm",
+            alt: "Mie Rebus Kuah",
             width: 600,
             height: 800
         },
         {
             key: "tongseng",
-            name: "Tongseng Gurih",
+            name: "Tongseng",
             price: 20000,
             description: "Tongseng dengan kuah santan bumbu kaya rempah yang meresap sempurna.",
             image: "assets/optimized/menu-tongseng.jpg",
-            alt: "Tongseng Gurih",
+            alt: "Tongseng",
             width: 600,
             height: 800
         },
